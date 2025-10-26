@@ -77,63 +77,160 @@ export default function Index() {
 
       <main>
         {activeSection === 'home' && (
-          <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-white py-24">
-            <div className="container mx-auto px-4">
-              <div className="max-w-3xl">
-                <h2 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                  Снабжение промышленных объектов
-                </h2>
-                <p className="text-xl text-white/90 mb-8 leading-relaxed">
-                  Комплексные поставки металлопроката, инструмента и стройматериалов. 
-                  Работаем с крупнейшими производственными предприятиями России.
-                </p>
-                <div className="flex flex-wrap gap-4">
-                  <Button 
-                    size="lg" 
-                    className="bg-accent hover:bg-accent/90 text-white px-8"
-                    onClick={() => setActiveSection('catalog')}
-                  >
-                    <Icon name="ShoppingCart" size={20} className="mr-2" />
-                    Перейти в каталог
-                  </Button>
-                  <Button 
-                    size="lg" 
-                    variant="outline" 
-                    className="border-white text-white hover:bg-white hover:text-primary"
-                    onClick={() => setActiveSection('contacts')}
-                  >
-                    Получить КП
-                  </Button>
+          <>
+            <section className="relative bg-gradient-to-br from-primary via-primary/95 to-secondary text-white py-32 overflow-hidden">
+              <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-3xl animate-fade-in">
+                  <Badge className="bg-accent/20 text-white border-accent/40 mb-4 px-4 py-1 text-sm">
+                    ООО "СОФ-МЕТ" — Москва и МО
+                  </Badge>
+                  <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Комплексное снабжение строительных объектов
+                  </h2>
+                  <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed">
+                    Металлопрокат, стройматериалы и оборудование с доставкой. 
+                    Работаем с крупными и малоэтажными объектами, частными заказчиками.
+                  </p>
+                  <div className="flex flex-wrap gap-4 mb-8">
+                    <Button 
+                      size="lg" 
+                      className="bg-accent hover:bg-accent/90 text-white px-8 text-lg h-14 shadow-lg hover:shadow-xl transition-all"
+                      onClick={() => setActiveSection('catalog')}
+                    >
+                      <Icon name="ShoppingCart" size={22} className="mr-2" />
+                      Смотреть каталог
+                    </Button>
+                    <Button 
+                      size="lg" 
+                      variant="outline" 
+                      className="border-2 border-white text-white hover:bg-white hover:text-primary h-14 px-8 text-lg"
+                      onClick={() => setActiveSection('contacts')}
+                    >
+                      <Icon name="FileText" size={22} className="mr-2" />
+                      Получить КП
+                    </Button>
+                  </div>
+                  <div className="flex flex-wrap gap-6 text-sm">
+                    <div className="flex items-center gap-2">
+                      <Icon name="Shield" size={20} className="text-accent" />
+                      <span>Сертифицированные товары</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="TrendingUp" size={20} className="text-accent" />
+                      <span>Гибкие цены</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Icon name="Zap" size={20} className="text-accent" />
+                      <span>Быстрая доставка</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="absolute bottom-0 right-0 opacity-10">
-              <Icon name="Factory" size={300} />
-            </div>
-          </section>
-        )}
-
-        {activeSection === 'home' && (
-          <section className="py-16 bg-card">
-            <div className="container mx-auto px-4">
-              <h3 className="text-3xl font-bold text-center mb-12">Почему выбирают нас</h3>
-              <div className="grid md:grid-cols-3 gap-8">
-                {[
-                  { icon: 'Truck', title: 'Доставка по России', desc: 'Собственная логистика и партнёрская сеть' },
-                  { icon: 'FileCheck', title: 'Полный пакет документов', desc: 'Сертификаты, паспорта качества, ТТН' },
-                  { icon: 'Clock', title: 'Склад 24/7', desc: 'Круглосуточная отгрузка для срочных заказов' },
-                ].map((item, i) => (
-                  <Card key={i} className="p-6 hover:shadow-lg transition-shadow border-2">
-                    <div className="bg-accent/10 w-14 h-14 rounded flex items-center justify-center mb-4">
-                      <Icon name={item.icon as any} size={28} className="text-accent" />
-                    </div>
-                    <h4 className="text-xl font-bold mb-2">{item.title}</h4>
-                    <p className="text-muted-foreground">{item.desc}</p>
-                  </Card>
-                ))}
+              <div className="absolute bottom-0 right-0 opacity-10">
+                <Icon name="Factory" size={400} />
               </div>
-            </div>
-          </section>
+              <div className="absolute top-20 right-10 opacity-5">
+                <Icon name="Package" size={200} />
+              </div>
+            </section>
+
+            <section className="py-20 bg-gradient-to-b from-card to-background">
+              <div className="container mx-auto px-4">
+                <div className="text-center mb-16">
+                  <h3 className="text-4xl md:text-5xl font-bold mb-4">Почему выбирают нас</h3>
+                  <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                    Профессионализм наших сотрудников и внимание к потребностям клиентов
+                  </p>
+                </div>
+                <div className="grid md:grid-cols-3 gap-8 mb-12">
+                  {[
+                    { icon: 'Truck', title: 'Своевременная доставка', desc: 'Доставка по Москве и МО в оговоренные сроки', color: 'bg-blue-500' },
+                    { icon: 'FileCheck', title: 'Полный пакет документов', desc: 'Сертификаты, паспорта качества, все по ГОСТ и ТУ', color: 'bg-green-500' },
+                    { icon: 'Warehouse', title: 'Широкий ассортимент', desc: 'Металлопрокат, кирпич, цемент, расходники', color: 'bg-purple-500' },
+                    { icon: 'Users', title: 'Персональное ведение', desc: 'Каждый заказ ведёт персональный менеджер', color: 'bg-orange-500' },
+                    { icon: 'DollarSign', title: 'Разумные цены', desc: 'Работаем напрямую с производителями', color: 'bg-emerald-500' },
+                    { icon: 'Package', title: 'Полная комплектация', desc: 'Подберём всё необходимое для вашего объекта', color: 'bg-red-500' },
+                  ].map((item, i) => (
+                    <Card key={i} className="p-6 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border-2 group">
+                      <div className={`${item.color} w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}>
+                        <Icon name={item.icon as any} size={32} className="text-white" />
+                      </div>
+                      <h4 className="text-xl font-bold mb-3">{item.title}</h4>
+                      <p className="text-muted-foreground leading-relaxed">{item.desc}</p>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section className="py-20 bg-muted/30">
+              <div className="container mx-auto px-4">
+                <div className="text-center mb-12">
+                  <h3 className="text-4xl font-bold mb-4">Работаем с ведущими производителями</h3>
+                  <p className="text-muted-foreground text-lg">Прямые поставки от проверенных партнёров</p>
+                </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+                  {[
+                    'ОАО "ММК-МЕТИЗ"',
+                    'ООО "БелЗАН МК"',
+                    'АО "Дружковский МЗ"',
+                    'ОАО "Лужский АЗ"',
+                    'ОАО "Речицкий МЗ"',
+                    'ООО "Технотрон-метиз"',
+                  ].map((partner, i) => (
+                    <Card key={i} className="p-4 text-center hover:shadow-lg transition-shadow border-2 flex items-center justify-center min-h-[100px]">
+                      <div>
+                        <Icon name="Factory" size={32} className="text-accent mx-auto mb-2" />
+                        <p className="text-xs font-medium text-muted-foreground">{partner}</p>
+                      </div>
+                    </Card>
+                  ))}
+                </div>
+              </div>
+            </section>
+
+            <section className="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+              <div className="container mx-auto px-4 relative z-10">
+                <div className="max-w-3xl mx-auto text-center">
+                  <h3 className="text-4xl md:text-5xl font-bold mb-6">Готовы начать сотрудничество?</h3>
+                  <p className="text-xl mb-8 text-white/90">
+                    Оставьте заявку и получите персональное коммерческое предложение
+                  </p>
+                  <div className="flex flex-wrap gap-4 justify-center">
+                    <Button 
+                      size="lg" 
+                      className="bg-accent hover:bg-accent/90 text-white px-10 text-lg h-14 shadow-xl"
+                      onClick={() => setActiveSection('contacts')}
+                    >
+                      <Icon name="Send" size={22} className="mr-2" />
+                      Отправить заявку
+                    </Button>
+                    <Button 
+                      size="lg" 
+                      variant="outline" 
+                      className="border-2 border-white text-white hover:bg-white hover:text-primary h-14 px-10 text-lg"
+                      onClick={() => setActiveSection('catalog')}
+                    >
+                      <Icon name="Search" size={22} className="mr-2" />
+                      Смотреть каталог
+                    </Button>
+                  </div>
+                  <div className="mt-8 flex items-center justify-center gap-2 text-white/80">
+                    <Icon name="Phone" size={20} />
+                    <a href="tel:+79645298387" className="text-xl font-bold hover:text-accent transition-colors">
+                      +7 964 529-83-87
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div className="absolute -bottom-10 -left-10 opacity-10">
+                <Icon name="Briefcase" size={300} />
+              </div>
+              <div className="absolute -top-10 -right-10 opacity-10">
+                <Icon name="Building2" size={250} />
+              </div>
+            </section>
+          </>
         )}
 
         {activeSection === 'catalog' && (
