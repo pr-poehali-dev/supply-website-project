@@ -46,7 +46,7 @@ export default function Index() {
                 <Icon name="Package" size={28} className="text-white" />
               </div>
               <div>
-                <h1 className="text-2xl font-bold tracking-wide">ПРОМСНАБ</h1>
+                <h1 className="text-2xl font-bold tracking-wide">СОФ-МЕТ</h1>
                 <p className="text-xs text-primary-foreground/70">Надёжные поставки для вашего бизнеса</p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function Index() {
               <h2 className="text-4xl font-bold mb-8">О компании</h2>
               <div className="space-y-6 text-lg leading-relaxed">
                 <p>
-                  <span className="font-bold text-accent">ПРОМСНАБ</span> — ведущий поставщик промышленных материалов 
+                  <span className="font-bold text-accent">СОФ-МЕТ</span> — ведущий поставщик промышленных материалов 
                   и оборудования для производственных предприятий России.
                 </p>
                 <p>
@@ -396,7 +396,7 @@ export default function Index() {
                 <div className="bg-accent p-2 rounded">
                   <Icon name="Package" size={24} className="text-white" />
                 </div>
-                <h3 className="text-xl font-bold">ПРОМСНАБ</h3>
+                <h3 className="text-xl font-bold">СОФ-МЕТ</h3>
               </div>
               <p className="text-primary-foreground/70 text-sm">
                 Надёжный партнёр в снабжении промышленных предприятий с 2010 года
@@ -422,7 +422,7 @@ export default function Index() {
             </div>
           </div>
           <div className="border-t border-primary-foreground/20 pt-6 text-center text-sm text-primary-foreground/60">
-            © 2024 ПРОМСНАБ. Все права защищены.
+            © 2024 СОФ-МЕТ. Все права защищены.
           </div>
         </div>
       </footer>
