@@ -339,21 +339,21 @@ export default function Index() {
                       <Icon name="Phone" size={24} className="text-accent flex-shrink-0" />
                       <div>
                         <div className="font-medium">Отдел продаж</div>
-                        <a href="tel:+74951234567" className="text-lg font-bold text-accent">+7 (495) 123-45-67</a>
+                        <a href="tel:+79645298387" className="text-lg font-bold text-accent">+7 964 529-83-87</a>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <Icon name="Mail" size={24} className="text-accent flex-shrink-0" />
                       <div>
                         <div className="font-medium">Email</div>
-                        <a href="mailto:sales@promsnab.ru" className="text-accent">sales@promsnab.ru</a>
+                        <a href="mailto:6404940@gmail.com" className="text-accent">6404940@gmail.com</a>
                       </div>
                     </div>
                     <div className="flex gap-3">
                       <Icon name="MapPin" size={24} className="text-accent flex-shrink-0" />
                       <div>
                         <div className="font-medium">Офис и склад</div>
-                        <p className="text-muted-foreground">Московская обл., г. Химки,<br />ул. Промышленная, д. 15</p>
+                        <p className="text-muted-foreground">Москва, ул. Кронштадтский бульвар,<br />дом 7а</p>
                       </div>
                     </div>
                     <div className="flex gap-3">
@@ -383,6 +383,21 @@ export default function Index() {
                   </form>
                 </Card>
               </div>
+
+              <Card className="p-6 mt-8">
+                <h3 className="text-xl font-bold mb-4">Схема проезда</h3>
+                <div className="w-full h-[450px] bg-muted rounded-lg overflow-hidden">
+                  <iframe 
+                    src="https://yandex.ru/map-widget/v1/?um=constructor%3Aef8a0c7b5d3e2f1a4b8c9d0e6f7g8h9i&amp;source=constructor&amp;ll=37.491857,55.818842&amp;z=16" 
+                    width="100%" 
+                    height="450" 
+                    frameBorder="0"
+                    title="Карта офиса СОФ-МЕТ"
+                    className="w-full h-full"
+                  >
+                  </iframe>
+                </div>
+              </Card>
             </div>
           </section>
         )}
@@ -415,9 +430,9 @@ export default function Index() {
             <div>
               <h4 className="font-bold mb-3">Контакты</h4>
               <div className="space-y-2 text-sm text-primary-foreground/70">
-                <p>+7 (495) 123-45-67</p>
-                <p>sales@promsnab.ru</p>
-                <p>Московская обл., г. Химки</p>
+                <p>+7 964 529-83-87</p>
+                <p>6404940@gmail.com</p>
+                <p>Москва, Кронштадтский бульвар, 7а</p>
               </div>
             </div>
           </div>
