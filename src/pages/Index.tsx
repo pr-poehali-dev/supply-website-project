@@ -237,34 +237,118 @@ export default function Index() {
 
         {activeSection === 'about' && (
           <section className="py-16">
-            <div className="container mx-auto px-4 max-w-4xl">
+            <div className="container mx-auto px-4 max-w-5xl">
               <h2 className="text-4xl font-bold mb-8">О компании</h2>
-              <div className="space-y-6 text-lg leading-relaxed">
-                <p>
-                  <span className="font-bold text-accent">СОФ-МЕТ</span> — ведущий поставщик промышленных материалов 
-                  и оборудования для производственных предприятий России.
+              <div className="space-y-6 leading-relaxed">
+                <p className="text-lg">
+                  Компания <span className="font-bold text-accent">ООО "СОФ-МЕТ"</span> — поставщик строительных материалов на рынке г.Москвы и Московской области. 
+                  Основным направлением работы компании является комплексное снабжение строительных, промышленных и гражданских объектов металлопрокатом, 
+                  строительными материалами и оборудованием. Наша компания проводит снабжение как крупных, так малоэтажных строительств, а так же частных заказчиков.
                 </p>
-                <p>
-                  С 2010 года мы обеспечиваем бесперебойные поставки металлопроката, инструмента, 
-                  крепежа и стройматериалов для крупнейших заводов, строительных компаний и энергетических объектов.
+                <p className="text-lg">
+                  Наши основные преимущества — высокий профессионализм наших сотрудников, а также уважение и внимание к потребностям наших клиентов.
                 </p>
-                <div className="grid md:grid-cols-3 gap-6 my-8">
-                  {[
-                    { num: '15+', label: 'лет на рынке' },
-                    { num: '500+', label: 'постоянных клиентов' },
-                    { num: '10 000+', label: 'позиций в каталоге' },
-                  ].map((stat, i) => (
-                    <Card key={i} className="p-6 text-center border-2">
-                      <div className="text-4xl font-bold text-accent mb-2">{stat.num}</div>
-                      <div className="text-muted-foreground">{stat.label}</div>
-                    </Card>
-                  ))}
+
+                <Card className="p-6 bg-accent/5 border-accent/20">
+                  <h3 className="text-2xl font-bold mb-4 text-accent">К вашим услугам:</h3>
+                  <ul className="space-y-2">
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>широкий выбор строительных материалов различных категорий</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>разумные цены</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>своевременная доставка</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>полный комплект необходимой документации</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>полная комплектация строительных объектов</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>персональное ведение заказа для каждого клиента</span>
+                    </li>
+                  </ul>
+                </Card>
+
+                <p className="text-lg font-medium">
+                  Все товары в ООО "СОФ-МЕТ" сертифицированы и соответствуют ГОСТ и ТУ.
+                </p>
+
+                <Card className="p-6 bg-primary/5 border-primary/20">
+                  <h3 className="text-2xl font-bold mb-4">Мы работаем напрямую с производителями</h3>
+                  <p className="mb-4">Поэтому у нас есть возможность:</p>
+                  <ul className="space-y-2">
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>установить адекватные и гибкие цены на все материалы</span>
+                    </li>
+                    <li className="flex gap-3">
+                      <Icon name="CheckCircle" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>реализовать материалы как оптом, так и в любом удобном для вас количестве</span>
+                    </li>
+                  </ul>
+                </Card>
+
+                <div>
+                  <h3 className="text-2xl font-bold mb-4">Комплектация строительных объектов включает в себя:</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="flex gap-3">
+                      <Icon name="Package" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>широкий ассортимент всех видов металлопроката</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <Icon name="Package" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>кирпич, пено- и газосиликатные блоки</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <Icon name="Package" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>цемент, вяжущие и сухие смеси</span>
+                    </div>
+                    <div className="flex gap-3">
+                      <Icon name="Package" size={20} className="text-accent mt-1 flex-shrink-0" />
+                      <span>прочие расходные материалы</span>
+                    </div>
+                  </div>
                 </div>
-                <p>
-                  Наши сильные стороны — это собственный складской комплекс площадью 5000 м², 
-                  прямые контракты с производителями и профессиональная команда логистов, 
-                  которая обеспечивает доставку в любую точку России.
-                </p>
+
+                <Card className="p-6 bg-muted/30">
+                  <h3 className="text-xl font-bold mb-4">Наши партнёры</h3>
+                  <div className="grid md:grid-cols-2 gap-3 text-sm">
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>ОАО "Лужский абразивный завод"</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>ОАО "ММК-МЕТИЗ"</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>ООО "БелЗАН МК"</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>АО "Дружковский метизный завод"</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>ОАО "Речицкий метизный завод"</span>
+                    </div>
+                    <div className="flex gap-2">
+                      <Icon name="Factory" size={18} className="text-accent mt-0.5 flex-shrink-0" />
+                      <span>ООО "Технотрон-метиз"</span>
+                    </div>
+                  </div>
+                </Card>
               </div>
             </div>
           </section>
